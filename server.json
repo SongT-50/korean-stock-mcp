@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.SongT-50/korean-stock-mcp",
+  "title": "Korean Stock Market Data",
+  "description": "Korean stock market data - prices, dividends, short selling, financial disclosures",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/SongT-50/korean-stock-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://korean-stock-mcp.onrender.com/mcp"
+    }
+  ]
+}
