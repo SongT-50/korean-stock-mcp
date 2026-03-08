@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: korean-stock-mcp
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: DATA_GO_KR_API_KEY
+        sync: false
+      - key: PORT
+        value: "8000"
+      - key: MCP_TRANSPORT
+        value: "streamable-http"
