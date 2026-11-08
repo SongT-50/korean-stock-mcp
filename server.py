@@ -708,7 +708,11 @@ if __name__ == "__main__":
         from mcp.server.transport_security import TransportSecuritySettings
         mcp.settings.host = "0.0.0.0"
         mcp.settings.port = port
+        allowed_hosts = os.getenv(
+            "MCP_ALLOWED_HOSTS", "korean-stock-mcp.onrender.com"
+        ).split(",")
         mcp.settings.transport_security = TransportSecuritySettings(
-            enable_dns_rebinding_protection=False,
+            enable_dns_rebinding_protection=True,
+            allowed_hosts=allowed_hosts,
         )
         mcp.run(transport=transport)
